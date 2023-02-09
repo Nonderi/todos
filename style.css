@@ -14,8 +14,14 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.headline{
+  font-family: "Lucida Handwriting", cursive, cursive;
+  color: mediumvioletred;
+
+}
 
 body {
+  justify-content: center;
   margin: 0;
   display: flex;
   place-items: center;
@@ -23,9 +29,51 @@ body {
   min-height: 100vh;
 }
 
+.container{
+  border-style: solid;
+  padding: 50px;
+}
+
+#new-todo{
+  font-size: large;
+}
+
+.icon-button {
+  border-style: none;
+  background-color: transparent;
+}
+
+.delete-button {
+  color: red;
+}
+
+.edit-button {
+  color: darkblue;
+}
+
+.tooltip .tooltiptext {
+  width: 120px;
+  top: 100%;
+  left: 50%;
+  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+}
+
+#todos {
+  margin:0;
+  padding: 0;
+  text-indent: 0;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: 1fr max-content max-content;
+  padding: 5px;
+  background-color: antiquewhite;
 }
