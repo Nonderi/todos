@@ -5,4 +5,4 @@
 - `npm run dev`
 
 ## Pre-requirements
-- (Node.js)[https://nodejs.org/en/] 
+- Node.js[https://nodejs.org/en/] 
