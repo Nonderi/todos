@@ -1,79 +1,102 @@
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  font-family: "Roboto", sans-serif;
+  --color-primary: rgb(127, 44, 203);
+  accent-color: var(--color-primary);
 }
 
-.headline{
-  font-family: "Lucida Handwriting", cursive, cursive;
-  color: mediumvioletred;
-
-}
-
-body {
-  justify-content: center;
+ul {
+  list-style: none;
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  padding: 0;
+}
+.app {
+  margin: 0;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100vh;
+  padding: 4px;
 }
 
-.container{
-  border-style: solid;
-  padding: 50px;
+.app-content {
+  max-width: 500px;
+  border: 1px solid #e5e4e4;
+  border-radius: 8px;
+  display: grid;
+  gap: 12px;
+  box-shadow: 0 4px 6px -1px rgb(138 43 226/ 0.25),
+    0 2px 4px -2px rgb(0 0 0 / 0.1);
+  padding: 16px;
+}
+.headline {
+  font-style: italic;
+  margin: 0;
+  color: rgb(37, 19, 81);
+}
+#progress-bar {
+  height: 30px;
+  width: 100%;
+  margin: -8px 0;
+}
+button[type="submit"] {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
 }
 
-#new-todo{
-  font-size: large;
+#new-todo {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  gap: 4px;
 }
-
+input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #706f6f;
+}
+:focus {
+  outline-color: var(--color-primary);
+  outline-offset: 2px;
+}
+button {
+  background: none;
+}
+#todos {
+  gap: 16px;
+  display: grid;
+}
+li {
+  display: grid;
+  grid-template-columns: 1fr max-content max-content max-content;
+  align-items: center;
+  gap: 16px;
+}
+.todo-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: break-spaces;
+}
+.checkbox-style {
+  height: 15px;
+  width: 15px;
+  margin: 0;
+}
 .icon-button {
-  border-style: none;
-  background-color: transparent;
+  height: 34px;
+  width: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  margin: 0 -2px;
+  color: var(--color-primary);
 }
-
 .delete-button {
-  color: red;
+  color: rgb(37, 19, 81);
 }
 
 .edit-button {
-  color: darkblue;
-}
-
-.tooltip .tooltiptext {
-  width: 120px;
-  top: 100%;
-  left: 50%;
-  margin-left: -60px; /* Use half of the width (120/2 = 60), to center the tooltip */
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-}
-
-#todos {
-  margin:0;
-  padding: 0;
-  text-indent: 0;
-}
-
-.row {
-  display: grid;
-  grid-template-columns: 1fr max-content max-content;
-  padding: 5px;
-  background-color: antiquewhite;
+  color: rgb(37, 19, 81);
 }
