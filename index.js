@@ -1,7 +1,6 @@
 const input = document.getElementById("input");
 const form = document.getElementById("new-todo");
 const ul = document.getElementById("todos");
-
 const progress = document.getElementById("progress-bar");
 
 //document.body.style.background =
@@ -33,18 +32,6 @@ function createTodo(text) {
   todosList.push(todo);
   setTodos(todosList);
   return todo;
-}
-function removeTodo(id) {
-  const todosList = getAllTodos();
-  let todoIndex = todosList.findIndex((item) => item.id === id);
-  todosList.splice(todoIndex, 1);
-  setTodos(todosList);
-}
-function toggleTodo(id) {
-  const todosList = getAllTodos();
-  let item = todosList.find((item) => item.id === id);
-  item.isDone = !item.isDone;
-  setTodos(todosList);
 }
 
 function handleCreateTodo() {
@@ -85,6 +72,19 @@ function createTodoListItem(todo) {
 
   li.append(span, inputCheckbox, deleteButton, updateButton);
   ul.append(li);
+}
+
+function removeTodo(id) {
+  const todosList = getAllTodos();
+  let todoIndex = todosList.findIndex((item) => item.id === id);
+  todosList.splice(todoIndex, 1);
+  setTodos(todosList);
+}
+function toggleTodo(id) {
+  const todosList = getAllTodos();
+  let item = todosList.find((item) => item.id === id);
+  item.isDone = !item.isDone;
+  setTodos(todosList);
 }
 
 function updateProgress() {
