@@ -22,7 +22,8 @@ function setTodos(todosList) {
 }
 
 function createTodo(text) {
-  const number = Math.random();
+  let number = Math.random() * 50;
+  number = Math.floor(number);
   let todo = {
     id: number,
     text,
