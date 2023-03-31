@@ -2,6 +2,7 @@
   font-family: "Roboto", sans-serif;
   --color-primary: rgb(127, 44, 203);
   accent-color: var(--color-primary);
+  font-size: 16px;
 }
 
 ul {
@@ -10,27 +11,32 @@ ul {
   padding: 0;
 }
 .app {
-  margin: 0;
   display: grid;
   justify-content: center;
   align-content: center;
   height: 100vh;
-  padding: 4px;
+  padding: 0;
+  margin: 0;
 }
 
 .app-content {
   max-width: 500px;
+  width: 100%;
   border: 1px solid #e5e4e4;
   border-radius: 8px;
   display: grid;
-  gap: 12px;
+  gap: 16px;
   box-shadow: 0 4px 6px -1px rgb(138 43 226/ 0.25),
     0 2px 4px -2px rgb(0 0 0 / 0.1);
   padding: 16px;
 }
+.horizontal-rule {
+  width: 100%;
+}
 .headline {
   font-style: italic;
   margin: 0;
+  padding: 0;
   color: rgb(37, 19, 81);
 }
 #progress-bar {
@@ -43,12 +49,14 @@ button[type="submit"] {
   color: white;
   border: none;
   border-radius: 4px;
+  padding: 8px 12px;
+  cursor: pointer;
 }
 
 #new-todo {
   display: grid;
   grid-template-columns: 1fr max-content;
-  gap: 4px;
+  gap: 8px;
 }
 input {
   padding: 8px;
@@ -59,22 +67,22 @@ input {
   outline-color: var(--color-primary);
   outline-offset: 2px;
 }
-button {
-  background: none;
-}
+
 #todos {
   gap: 16px;
   display: grid;
+  padding: 8px 0;
 }
 li {
   display: grid;
-  grid-template-columns: 1fr max-content max-content max-content;
+  grid-template-columns: max-content 1fr max-content max-content;
   align-items: center;
   gap: 16px;
+  padding: 12px 0;
+  box-shadow: 0px 12px 10px -15px rgb(138 43 226/ 0.25),
+    0px -10px 10px -15px rgb(138 43 226/ 0.25);
 }
 .todo-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
   white-space: break-spaces;
 }
 .checkbox-style {
@@ -85,18 +93,14 @@ li {
 .icon-button {
   height: 34px;
   width: 34px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   border-radius: 50%;
-  border: 2px solid currentColor;
+  border: none;
   margin: 0 -2px;
   color: var(--color-primary);
+  box-shadow: 0px 2px 4px 1px rgb(138 43 226/ 0.25);
+  cursor: pointer;
+  background: none;
 }
-.delete-button {
-  color: rgb(37, 19, 81);
-}
-
-.edit-button {
-  color: rgb(37, 19, 81);
+.edit-button::before {
+  margin-left: 2px;
 }

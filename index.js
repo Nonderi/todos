@@ -71,7 +71,7 @@ function createTodoListItem(todo) {
     li.remove();
   };
 
-  li.append(span, inputCheckbox, deleteButton, updateButton);
+  li.append(inputCheckbox, span, deleteButton, updateButton);
   ul.append(li);
 }
 
